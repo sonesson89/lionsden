@@ -3,12 +3,15 @@ title: Anmälan
 date: 2021-01-28 12:26:22
 ---
 
-<!--<h3>
+<h3>
 Anmälan är inte öppen än för allmänheten, vänligen återkom senare till denna sida, då kommer du att hitta ett
 anmälningsformulär här.
-</h3>-->
+</h3>
 
 <script defer>
+  
+
+/**
 const endpoint = 'http://sti-starcraft.org:3000/graphql';
 //const endpoint = 'http://localhost:3000/graphql';
 var members;
@@ -126,17 +129,17 @@ function fetchAllSubmissions() {
     console.log('data returned:', resp);
     members = resp.data.members;
 
-    /* const nyborjare_count = members.filter(x => x.trainingGroup === 'Nybörjargruppen').length;
-    const fortsattare_count = members.filter(x => x.trainingGroup === 'Fortsättargruppen').length;
-    const avancerade_count = members.filter(x => x.trainingGroup === 'AvanceradeGruppen').length;
-    const tavling_count = members.filter(x => x.trainingGroup === 'Tävlingsgruppen').length;
-    const morgon_count = members.filter(x => x.trainingGroup === 'MorgonFörmiddag').length;
+    //const nyborjare_count = members.filter(x => x.trainingGroup === 'Nybörjargruppen').length;
+    //const fortsattare_count = members.filter(x => x.trainingGroup === 'Fortsättargruppen').length;
+    //const avancerade_count = members.filter(x => x.trainingGroup === 'AvanceradeGruppen').length;
+    //const tavling_count = members.filter(x => x.trainingGroup === 'Tävlingsgruppen').length;
+    //const morgon_count = members.filter(x => x.trainingGroup === 'MorgonFörmiddag').length;
 
-    document.querySelector('#trainingGroup option:nth-child(2)').innerText += ` (${nyborjare_count} anmälda)`;
-    document.querySelector('#trainingGroup option:nth-child(3)').innerText += ` (${fortsattare_count} anmälda)`;
-    document.querySelector('#trainingGroup option:nth-child(4)').innerText += ` (${avancerade_count} anmälda)`;
-    document.querySelector('#trainingGroup option:nth-child(5)').innerText += ` (${tavling_count} anmälda)`;
-    document.querySelector('#trainingGroup option:nth-child(6)').innerText += ` (${morgon_count} anmälda)`; */
+    //document.querySelector('#trainingGroup option:nth-child(2)').innerText += ` (${nyborjare_count} anmälda)`;
+    //document.querySelector('#trainingGroup option:nth-child(3)').innerText += ` (${fortsattare_count} anmälda)`;
+    //document.querySelector('#trainingGroup option:nth-child(4)').innerText += ` (${avancerade_count} anmälda)`;
+    //document.querySelector('#trainingGroup option:nth-child(5)').innerText += ` (${tavling_count} anmälda)`;
+    //document.querySelector('#trainingGroup option:nth-child(6)').innerText += ` (${morgon_count} anmälda)`;
   }).catch(console.error);
 }
 
@@ -163,11 +166,11 @@ function setListeners() {
     if (document.getElementById('trainingGroup').value !== 'none') {
       document.getElementById('trainingGroupDescription').style.display = 'block';
 
-      /* <option value="Nybörjargruppen">Nybörjargruppen</option>
-      <option value="Fortsättargruppen">Fortsättargruppen</option>
-      <option value="AvanceradeGruppen">Avancerade gruppen</option>
-      <option value="Tävlingsgruppen">Tävlingsgruppen</option>
-      <option value="MorgonFörmiddag">Endast morgon/förmiddag</option> */
+      //<option value="Nybörjargruppen">Nybörjargruppen</option>
+      //<option value="Fortsättargruppen">Fortsättargruppen</option>
+      //<option value="AvanceradeGruppen">Avancerade gruppen</option>
+      //<option value="Tävlingsgruppen">Tävlingsgruppen</option>
+      //<option value="MorgonFörmiddag">Endast morgon/förmiddag</option>
 
       if (document.getElementById('trainingGroup').value === 'Nybörjargruppen') {
         document.querySelector('#trainingGroupDescription div').innerHTML =
@@ -276,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function(){
   fetchAllSubmissions();
   setListeners();
 });
-
+*/
 </script>
 
 <style>
@@ -407,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 </style>
  
-<div id="registerContainer">
+<!-- <div id="registerContainer">
   <div id="successBox" style="display: none;">
     <div id="checkboxContainer">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
@@ -558,4 +561,4 @@ document.addEventListener("DOMContentLoaded", function(){
         </div>
     </div>
   </form>
-</div>
+</div> -->
