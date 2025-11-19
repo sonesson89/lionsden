@@ -1,11 +1,10 @@
 ---
-title: Anmälan
-date: 2025-06-17 21:04:32
+title: Anmälan VT2026
+date: 2025-11-19 20:59:54
 ---
 
-
-
 <script defer>
+
 const endpoint = 'http://sti-starcraft.org:3000/graphql';
 //const endpoint = 'http://localhost:3000/graphql';
 var members;
@@ -123,17 +122,17 @@ function fetchAllSubmissions() {
     console.log('data returned:', resp);
     members = resp.data.members;
 
-    /* const nyborjare_count = members.filter(x => x.trainingGroup === 'Nybörjargruppen').length;
-    const fortsattare_count = members.filter(x => x.trainingGroup === 'Fortsättargruppen').length;
-    const avancerade_count = members.filter(x => x.trainingGroup === 'AvanceradeGruppen').length;
-    const tavling_count = members.filter(x => x.trainingGroup === 'Tävlingsgruppen').length;
-    const morgon_count = members.filter(x => x.trainingGroup === 'MorgonFörmiddag').length;
+    //const nyborjare_count = members.filter(x => x.trainingGroup === 'Nybörjargruppen').length;
+    //const fortsattare_count = members.filter(x => x.trainingGroup === 'Fortsättargruppen').length;
+    //const avancerade_count = members.filter(x => x.trainingGroup === 'AvanceradeGruppen').length;
+    //const tavling_count = members.filter(x => x.trainingGroup === 'Tävlingsgruppen').length;
+    //const morgon_count = members.filter(x => x.trainingGroup === 'MorgonFörmiddag').length;
 
-    document.querySelector('#trainingGroup option:nth-child(2)').innerText += ` (${nyborjare_count} anmälda)`;
-    document.querySelector('#trainingGroup option:nth-child(3)').innerText += ` (${fortsattare_count} anmälda)`;
-    document.querySelector('#trainingGroup option:nth-child(4)').innerText += ` (${avancerade_count} anmälda)`;
-    document.querySelector('#trainingGroup option:nth-child(5)').innerText += ` (${tavling_count} anmälda)`;
-    document.querySelector('#trainingGroup option:nth-child(6)').innerText += ` (${morgon_count} anmälda)`; */
+    //document.querySelector('#trainingGroup option:nth-child(2)').innerText += ` (${nyborjare_count} anmälda)`;
+    //document.querySelector('#trainingGroup option:nth-child(3)').innerText += ` (${fortsattare_count} anmälda)`;
+    //document.querySelector('#trainingGroup option:nth-child(4)').innerText += ` (${avancerade_count} anmälda)`;
+    //document.querySelector('#trainingGroup option:nth-child(5)').innerText += ` (${tavling_count} anmälda)`;
+    //document.querySelector('#trainingGroup option:nth-child(6)').innerText += ` (${morgon_count} anmälda)`;
   }).catch(console.error);
 }
 
@@ -160,11 +159,11 @@ function setListeners() {
     if (document.getElementById('trainingGroup').value !== 'none') {
       document.getElementById('trainingGroupDescription').style.display = 'block';
 
-      /* <option value="Nybörjargruppen">Nybörjargruppen</option>
-      <option value="Fortsättargruppen">Fortsättargruppen</option>
-      <option value="AvanceradeGruppen">Avancerade gruppen</option>
-      <option value="Tävlingsgruppen">Tävlingsgruppen</option>
-      <option value="MorgonFörmiddag">Endast morgon/förmiddag</option> */
+      //<option value="Nybörjargruppen">Nybörjargruppen</option>
+      //<option value="Fortsättargruppen">Fortsättargruppen</option>
+      //<option value="AvanceradeGruppen">Avancerade gruppen</option>
+      //<option value="Tävlingsgruppen">Tävlingsgruppen</option>
+      //<option value="MorgonFörmiddag">Endast morgon/förmiddag</option>
 
       if (document.getElementById('trainingGroup').value === 'Nybörjargruppen') {
         document.querySelector('#trainingGroupDescription div').innerHTML =
@@ -403,6 +402,7 @@ document.addEventListener("DOMContentLoaded", function(){
       filter: drop-shadow(2px 4px 6px gainsboro);
     }
 </style>
+ 
 <div id="registerContainer">
   <div id="successBox" style="display: none;">
     <div id="checkboxContainer">
