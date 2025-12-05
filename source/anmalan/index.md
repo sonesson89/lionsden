@@ -3,15 +3,15 @@ title: Anmälan
 date: 2021-01-28 12:26:22
 ---
 
-<h3>
+<!-- <h3>
 Anmälan är inte öppen än för allmänheten, vänligen återkom senare till denna sida, då kommer du att hitta ett
 anmälningsformulär här.
-</h3>
+</h3> -->
 
 <script defer>
   
 
-/**
+
 const endpoint = 'http://sti-starcraft.org:3000/graphql';
 //const endpoint = 'http://localhost:3000/graphql';
 var members;
@@ -279,7 +279,6 @@ document.addEventListener("DOMContentLoaded", function(){
   fetchAllSubmissions();
   setListeners();
 });
-*/
 </script>
 
 <style>
@@ -410,7 +409,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 </style>
  
-<!-- <div id="registerContainer">
+<div id="registerContainer">
   <div id="successBox" style="display: none;">
     <div id="checkboxContainer">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
@@ -561,4 +560,4 @@ document.addEventListener("DOMContentLoaded", function(){
         </div>
     </div>
   </form>
-</div> -->
+</div>
