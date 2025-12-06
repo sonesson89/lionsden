@@ -12,11 +12,11 @@ anmälningsformulär här.
   
 
 
-const endpoint = 'http://sti-starcraft.org:3000/graphql';
-//const endpoint = 'http://localhost:3000/graphql';
+//const endpoint = 'http://sti-starcraft.org:3000/graphql';
+const endpoint = 'https://www.gbgmuaythai.com/api/graphql';
 var members;
 
-if (window.location.href.startsWith('https')) {
+if (false /*window.location.href.startsWith('https')*/) {
   setTimeout(() => {
     const box = document.getElementById('registerContainer');
     box.innerHTML = '';

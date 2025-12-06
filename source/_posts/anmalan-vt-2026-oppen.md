@@ -17,4 +17,4 @@ Nu är det dags att börja anmäla sig för vårterminen som drar igång i janua
 * **Avvakta med att betala terminsavgiften förrän du vet att du fått en plats**, så slipper vi onödigt strul. **Betala alltså inte avgiften förrän du fått ett mail som bekräftar att du fått en plats, och inte hamnat på kölistan.**
 * När du får besked om att du har en plats är det viktigt att betala terminsavgiften **omgående** för att behålla din plats (gäller ej nybörjare som får provträna en vecka innan man kanske kan få bli medlem). Den som inte betalar kommer bli av med sin plats. Nuvarande terminavgift ligger på 2700 kr och betalas enklast via Swish (läs mer om betalning [här](omoss/#avgifter))
 
-# <a href="http://gbgmuaythai.com/anmalan" target="_self">KLICKA HÄR FÖR ATT ANMÄLA DIG</a>
+# <a href="/anmalan" target="_self">KLICKA HÄR FÖR ATT ANMÄLA DIG</a>
