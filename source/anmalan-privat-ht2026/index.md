@@ -2,14 +2,19 @@
 title: Anmälan HT2026
 date: 2026-06-05 20:59:54
 ---
+<!-- <h3>
+Anmälan är inte öppen än för allmänheten, vänligen återkom senare till denna sida, då kommer du att hitta ett
+anmälningsformulär här.
+</h3> -->
 
 <script defer>
-
-const endpoint = 'http://sti-starcraft.org:3000/graphql';
-//const endpoint = 'http://localhost:3000/graphql';
+// LOCAL
+//const endpoint = 'http://127.0.0.1:3000/graphql';
+// PROD
+const endpoint = 'https://www.gbgmuaythai.com/api/graphql';
 var members;
 
-if (window.location.href.startsWith('https')) {
+if (false /*window.location.href.startsWith('https')*/) {
   setTimeout(() => {
     const box = document.getElementById('registerContainer');
     box.innerHTML = '';
@@ -43,7 +48,7 @@ const validateSSN = ssn => {
   );
 }
 
-function submitMember(firstName, lastName, ssn, email, trainingGroup, memberLastTerm = 0, lastTermTrainingGroup = '', message = '', gender = '') {
+function submitMember(token, firstName, lastName, ssn, email, trainingGroup, memberLastTerm = 0, lastTermTrainingGroup = '', message = '', gender = '') {
     message = message.replaceAll('\n', ' ');
 
     const query =
@@ -76,7 +81,7 @@ function submitMember(firstName, lastName, ssn, email, trainingGroup, memberLast
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     },
-    body: JSON.stringify({ query })
+    body: JSON.stringify({ query, recaptchaToken: token })
   }).then(r => r.json()).then(resp => {
     if (resp && resp.data && resp.data.addMember && resp.data.addMember.firstName && resp.data.addMember.lastName) {
       // Success
@@ -85,14 +90,14 @@ function submitMember(firstName, lastName, ssn, email, trainingGroup, memberLast
     } else {
       document.getElementById('failBox').style.display = 'block';
       document.getElementById('signupForm').style.display = 'none';
-      document.querySelector('#failBox p').innerHTML = JSON.stringify(resp, null, 4);
+      document.querySelector('#failBox pre').innerHTML = JSON.stringify(resp, null, 4);
       console.error(resp);
     }
     window.scrollTo(0,0);
   }).catch(err => {
     document.getElementById('failBox').style.display = 'block';
     document.getElementById('signupForm').style.display = 'none';
-    document.querySelector('#failBox p').innerHTML = JSON.stringify(err, null, 4);
+    document.querySelector('#failBox pre').innerHTML = JSON.stringify(err, null, 4);
     window.scrollTo(0,0);
     console.error(err);
   });
@@ -251,28 +256,35 @@ function setListeners() {
 
       document.getElementById('mainErrorMessage').style.display = 'none';
       document.querySelector('#mainErrorMessage div').innerText = '';
-      submitMember(
-        document.getElementById('firstName').value,
-        document.getElementById('lastName').value,
-        document.getElementById('ssn').value,
-        document.getElementById('mail1').value,
-        document.getElementById('trainingGroup').value,
-        document.getElementById('memberLastTerm').checked ? 1 : 0,
-        document.getElementById('trainingGroup2').value === 'none' ? '': document.getElementById('trainingGroup2').value,
-        document.getElementById('memberMessage').value,
-        document.getElementById('genderSelect').value
-      ).then(() => {
-        document.getElementById('submitButton').removeAttribute('disabled');
-      })
+
+
+      grecaptcha.ready(async function() {
+        const token = await grecaptcha.execute('6Ld_iCMsAAAAAKaAUu9HgW9K0WbxZBlWH54IhhlZ', {action: 'submit'})
+        //console.log('token', token)
+        // Add your logic to submit to your backend server here.
+        submitMember(
+          token,
+          document.getElementById('firstName').value,
+          document.getElementById('lastName').value,
+          document.getElementById('ssn').value,
+          document.getElementById('mail1').value,
+          document.getElementById('trainingGroup').value,
+          document.getElementById('memberLastTerm').checked ? 1 : 0,
+          document.getElementById('trainingGroup2').value === 'none' ? '': document.getElementById('trainingGroup2').value,
+          document.getElementById('memberMessage').value,
+          document.getElementById('genderSelect').value
+        ).then(() => {
+          document.getElementById('submitButton').removeAttribute('disabled');
+        })
+      });
     }
   });
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  fetchAllSubmissions();
+  //fetchAllSubmissions();
   setListeners();
 });
-
 </script>
 
 <style>
@@ -402,9 +414,11 @@ document.addEventListener("DOMContentLoaded", function(){
       filter: drop-shadow(2px 4px 6px gainsboro);
     }
 </style>
- 
 
- <div id="registerContainer">
+Anmälan är för närvarande stängd. När vi börjar närma oss nästa termin, vilket är höstterminen 2026, så kommer detta att kommuniceras på våra sociala medier och på vår hemsida. Då kommer det att finnas ett anmälningsformulär här.
+
+
+<div id="registerContainer">
   <div id="successBox" style="display: none;">
     <div id="checkboxContainer">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
