@@ -1,6 +1,6 @@
 ---
-title: Anmälan VT2026
-date: 2025-11-19 20:59:54
+title: Anmälan HT2026
+date: 2026-06-05 20:59:54
 ---
 
 <script defer>
@@ -403,7 +403,8 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 </style>
  
-<div id="registerContainer">
+
+ <div id="registerContainer">
   <div id="successBox" style="display: none;">
     <div id="checkboxContainer">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
@@ -419,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function(){
     <h3>
       Något gick fel med din anmälan
     </h3>
-    <p></p>
+    <pre></pre>
   </div>
   <form action="javascript:void(0);" id="signupForm">
     <div id="signup">
