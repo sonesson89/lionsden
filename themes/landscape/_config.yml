@@ -1,13 +1,12 @@
 # Header
 menu:
   Hem: /
+  FAQ: /faq
   Om oss: /omoss
-  Nyheter: /nyheter
   Galleri: /galleri
   Schema: /schema
   Shop: /shop
   Privatlektioner: /privatlektioner
-  Idrottsrehab: /idrottsrehab
 
 # Content
 excerpt_link: Läs mer

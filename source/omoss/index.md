@@ -7,7 +7,8 @@ slug: om-oss
 ## Innehållsförteckning
 1. [Om klubben](#om-klubben)
 2. [Regler och värderingar för Lejonkulan](#regler)
-3. [Avgifter](#avgifter)
+3. [Om Muay Thai](#regler)
+<!-- 3. [Avgifter](#avgifter) -->
 4. [Hitta hit](#hitta-hit)
 5. [Tränare](#tranare)
 6. [Grupperna](#grupperna)
@@ -15,20 +16,16 @@ slug: om-oss
 <a name="om-klubben"></a>
 ## Om klubben
 
-**
-*”Endast den som är mjuk kan vara hård”*
-**
+#### *”Endast den som är mjuk kan vara hård”*
 
 På Göteborg Muay Thai tränar vi just Muay Thai/Thaiboxning som det skall tränas. Vi förvaltar och utvecklar den sport som har en tusenårig tradition och allt vad det innebär. För oss är det inte bara en klubb – det är ett andra hem där vi möts, umgås, har roligt och tränar stenhårt.
 
-**
-*”Utan glädje, kamratskap och gemenskap skapas inga stora idrottsmän eller gentlemen”*
-**
+#### *”Utan glädje, kamratskap och gemenskap skapas inga stora idrottsmän eller gentlemen”*
 
 Vi kallar klubben för Lejonkulan med ovanstående citat i tankarna. Hos oss tränas man inte bara för att vinna i ringen utan också för att kunna utvecklas som person. Våra värderingar skall speglas, inte bara under träningstid, utan också utanför Lejonkulan.
 Göteborg Muay Thai har ”fostrat” sina Lejon till Svenska Mästare, Nordiska Mästare, Världsmästare, rankade fighters/Nak Muay på Lumpinee och Rajadamnern stadiums i Thailand, samt på stora galor både nationellt och internationellt. Det är vi mycket stolta över. Men det vi är väldigt stolta över är att de är Champions utanför ringen; skötsamma, vänliga, hjälpsamma, respekterar och behandlar sina medmänniskor väl och sist, men inte minst, ödmjuka.
 
-Tänker du nu att  Göteborg Muay Thai är något för dig, läs då igenom nedanstående:
+Tänker du nu att Göteborg Muay Thai är något för dig, läs då igenom nedanstående:
 
 <a name="regler"></a>
 ## Regler och värderingar för Lejonkulan
@@ -39,31 +36,39 @@ Tänker du nu att  Göteborg Muay Thai är något för dig, läs då igenom neda
 - Redo att träna hårt! (Den som inte tycker om hård träning bör vända sig till en annan klubb)
 - Skötsamma både i och utanför Lejonkulan! (Vi tränar folk för ringen, INTE för gatan)
 
-**Utrustning:**
-- Tandskydd
-- Suspensoar (killar)
-- Handskar, gärna klubbens. 12 – 18 oz (beroende på kroppsvikt) i bra skick. Är du osäker på om dina handskar är godkända för sparring bör du fråga din tränare.
-- Benskydd, gärna klubbens. För att kunna sparra och gå D-Klass matcher krävs benskydd.
-- Shorts, gärna klubbens.
-- Tröja/Linne (inget krav, då det går bra att träna i bar överkropp)
-- Alla ovanstående saker ska vara rena och i bra skick för att förhindra skador eller sjukdomar.
+Om du har fler frågor, vänligen vänd dig till vår [FAQ-sektion](/faq).
 
-**Sparring:**
-För att ingen som tränar på vår klubb ska skada sig, samt för att alla ska få ut maximalt med kunskap i och med sparringen så vill vi att:
-
-- All sparring ska vara lugn och behärskad.
-- Den som kan minst bestämmer tempot.
-- Inga hårda tekniker utövas på kamrater under sparring. Hårdhet utövas på mitts eller säck!
-
-<a name="avgifter"></a>
+<!-- <a name="avgifter"></a>
 ## Avgifter
 
 **2700 kr per termin**, 100 kr av dem går till budoförbundet för att du ska hållas försäkrad mm.
 Betalning sker enklast via **Swish** till nummer **1230231357** eller genom insättning av summan på **PlusGiro 1478839-2**. Märk din inbetalning med namn, personnummer och vilken grupp du anmäler dig till. Vid eventuella frågor angående ekonomi och inbetalningar, eller om du vill ha kvitto på din betalning, kontakta vår kassör Rebin på: rebin@reakconsulting.se
 
 Eftersom Lejonkulan drivs som en ideell verksamhet tjänar vi inga pengar på klubben. Allt går till utgifter så som klubblokal, el, reparationer mm och för att skicka folk till SM, EM, VM eller andra tävlingar. Därför är det väldigt viktigt att du som elev gör allt du kan för att bli bättre, då det är ditt svett och slit som är betalningen till våra tränare!
-
+ -->
 Träna? Maila då till info@gbgmuaythai.com eller ta dig till Lejonkulan Norra Gubberogatan 32 (Olskroken). Information om nästa terminsstart för nybörjare och mellangrupp kommer att läggas ut på hemsidan när det är dags, men hör gärna av dig och visa intresse oavsett var i terminerna vi är.
+
+## Om Muay Thai
+
+### Fördelar med Muay Thai – En tusenårig tradition
+
+Att träna på Göteborg Muay Thai innebär att du kliver in i en sport med rötter som sträcker sig över tusen år tillbaka i tiden. Muay Thai, ursprungligen utvecklat som ett militärt närstridssystem kallat Muay Boran, har formats genom århundraden av thailändsk historia för att bli den effektiva idrott den är idag.
+
+### Total fysisk transformation genom "De åtta vapnen"
+
+Muay Thai är känt som ”The Art of Eight Limbs” eftersom utövaren lär sig att använda slag, sparkar, knän och armbågar. Denna historiska bredd gör träningen extremt allsidig. Genom att bemästra dessa åtta kontaktpunkter bygger du en unik kombination av explosiv styrka, uthållighet och rörlighet som få andra sporter kan erbjuda.
+
+### Mental styrka och krigardisciplin
+
+Bakom de fysiska teknikerna ligger en djup mental skola. Historiskt sett var Muay Thai en livsstil för krigare där fokus och lugn under press var avgörande. På Lejonkulan förvaltar vi detta arv genom att träna upp ditt pannben och din självdisciplin. Vi fostrar Champions utanför ringen genom att lära ut vikten av ödmjukhet och mental uthållighet i livets alla skeden.
+
+### Effektivt självförsvar och clinch
+
+Muay Thai är unikt bland kampsporter för sitt fokus på clinch – en stående brottning som historiskt användes för att kontrollera motståndaren på nära håll. Idag ger detta dig ett extremt effektivt system för självförsvar. Du lär dig att hantera stress, läsa av din omgivning och agera med precision och kraft när det behövs som mest.
+
+### Gemenskap rotad i respekt
+
+Trots sportens tuffa yttre är den djupt rotad i respekt. Innan matcher utförs traditionellt en ”Wai Kru Ram Muay” för att visa vördnad för tränare och historia. Denna tradition av respekt genomsyrar vår klubbkultur. På Göteborg Muay Thai tränar vi som ett team där vi lyfter varandra, visar ödmjukhet inför sportens arv och skapar en kamratskap som sträcker sig långt utanför träningsmattan.
 
 <a name="hitta-hit"></a>
 ## Hitta hit
@@ -79,6 +84,8 @@ Vår adress är Norra Gubberogatan 32, 416 63 Göteborg. Närmaste hållplatsen 
 
 <a name="tranare"></a>
 ## Tränare
+
+OBS, denna information är inte uppdaterad, då tränare för de olika grupperna brukar ändras från termin till termin.
 
 ### Tävlingsgrupp
 
