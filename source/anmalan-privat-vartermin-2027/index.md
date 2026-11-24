@@ -1,7 +1,9 @@
 ---
-title: Anmälan HT2026
-date: 2026-06-05 20:59:54
+title: Anmälan inför vårterminen 2027
+date: 2026-11-24 16:54:35
 ---
+
+
 <!-- <h3>
 Anmälan är inte öppen än för allmänheten, vänligen återkom senare till denna sida, då kommer du att hitta ett
 anmälningsformulär här.
@@ -14,39 +16,13 @@ anmälningsformulär här.
 const endpoint = 'https://www.gbgmuaythai.com/api/graphql';
 var members;
 
-if (false /*window.location.href.startsWith('https')*/) {
-  setTimeout(() => {
-    const box = document.getElementById('registerContainer');
-    box.innerHTML = '';
-  
-    const link = document.createElement('a');
-    link.setAttribute('href', 'http://sti-starcraft.org/form.php');
-    link.setAttribute('target', '_blank');
-    link.innerText = 'Klicka här för att komma till anmälningsformuläret';
-    link.style.fontSize = '25px';
-  
-    box.appendChild(link);
-  }, 100);
-}
-
 const validateEmail = email => {
   const regex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
   return !!(email.match(regex) && email.match(regex).length === 1 && email.match(regex)[0] === email);
 }
 
-const validateSSN = ssn => {
-  const allowedSSNRegexPatterns = [
-    /[0-9]{10,10}/g, // YYMMDDXXXX
-    /[0-9]{12,12}/g, // YYYYMMDDXXXX
-    /[0-9]{8,8}-[0-9]{4,4}/g, // YYYYMMDD-XXXX
-    /[0-9]{6,6}-[0-9]{4,4}/g // YYMMDD-XXXX
-  ];
-  return allowedSSNRegexPatterns.some(regex =>
-    ssn.match(regex) &&
-    ssn.match(regex).length === 1 &&
-    ssn.match(regex)[0] === ssn
-  );
-}
+// YYYYMMDDXXXX
+const validateSSN = ssn => /^(19|20)[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])[0-9]{4}$/.test(ssn);
 
 function submitMember(token, firstName, lastName, ssn, email, trainingGroup, memberLastTerm = 0, lastTermTrainingGroup = '', message = '', gender = '') {
     message = message.replaceAll('\n', ' ');
@@ -218,7 +194,7 @@ function setListeners() {
       message += 'Personnummer saknas\n';
       errorFound = true;
     } else if (!validateSSN(document.getElementById('ssn').value)) {
-      message += 'Personnummer har felaktigt format\n';
+      message += 'Personnummer har felaktigt format, ange 12 siffror (YYYYMMDDXXXX)\n';
       errorFound = true;
     }
     if (!document.getElementById('mail1').value || !document.getElementById('mail2').value) {
@@ -415,8 +391,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 </style>
 
-Anmälan är för närvarande stängd. När vi börjar närma oss nästa termin, vilket är höstterminen 2026, så kommer detta att kommuniceras på våra sociala medier och på vår hemsida. Då kommer det att finnas ett anmälningsformulär här.
-
+<!-- Anmälan är för närvarande stängd. När vi börjar närma oss nästa termin, vilket är höstterminen 2026, så kommer detta att kommuniceras på våra sociala medier och på vår hemsida. Då kommer det att finnas ett anmälningsformulär här. -->
 
 <div id="registerContainer">
   <div id="successBox" style="display: none;">
@@ -459,7 +434,10 @@ Anmälan är för närvarande stängd. När vi börjar närma oss nästa termin,
                 Fullständigt personnummer <span class="mandatory"></span>
             </div>
             <div class="signup__column">
-                <input type="text" id="ssn" maxlength="55" placeholder="YYYYMMDDXXXX" />
+                <input type="text" id="ssn" minlength="12" maxlength="12" pattern="[0-9]{12}" inputmode="numeric" placeholder="YYYYMMDDXXXX" />
+                <div class="" style="font-size: 0.75em">
+                    Personnummer måste matcha det exakta formatet ÅÅÅÅMMDDXXXX, inga bindestreck, enbart 12 siffror
+                </div>
             </div>
         </div>
         <div class="signup__row">

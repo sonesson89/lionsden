@@ -3,10 +3,10 @@ title: Anmälan
 date: 2021-01-28 12:26:22
 ---
 
-<!-- <h3>
+<h3>
 Anmälan är inte öppen än för allmänheten, vänligen återkom senare till denna sida, då kommer du att hitta ett
 anmälningsformulär här.
-</h3> -->
+</h3>
 
 <script defer>
 // LOCAL
@@ -14,21 +14,6 @@ anmälningsformulär här.
 // PROD
 const endpoint = 'https://www.gbgmuaythai.com/api/graphql';
 var members;
-
-if (false /*window.location.href.startsWith('https')*/) {
-  setTimeout(() => {
-    const box = document.getElementById('registerContainer');
-    box.innerHTML = '';
-  
-    const link = document.createElement('a');
-    link.setAttribute('href', 'http://sti-starcraft.org/form.php');
-    link.setAttribute('target', '_blank');
-    link.innerText = 'Klicka här för att komma till anmälningsformuläret';
-    link.style.fontSize = '25px';
-  
-    box.appendChild(link);
-  }, 100);
-}
 
 const validateEmail = email => {
   const regex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
@@ -417,7 +402,7 @@ document.addEventListener("DOMContentLoaded", function(){
 </style>
 
 <!-- Anmälan är för närvarande stängd. När vi börjar närma oss nästa termin, vilket är höstterminen 2026, så kommer detta att kommuniceras på våra sociala medier och på vår hemsida. Då kommer det att finnas ett anmälningsformulär här. -->
-
+<!-- 
 <div id="registerContainer">
   <div id="successBox" style="display: none;">
     <div id="checkboxContainer">
@@ -569,4 +554,4 @@ document.addEventListener("DOMContentLoaded", function(){
         </div>
     </div>
   </form>
-</div>
+</div> -->
