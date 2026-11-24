@@ -26,6 +26,14 @@ MAIL_PASSWORD=<Password for the mail account chosen>
 
 **INSTAGRAM_GRAPH_API_TOKEN** The auth token generated for the Lejonkulan Instagram account. Used to fetch own feed. To generate a token check [this tutorial](https://www.youtube.com/watch?v=E9OftnOmcIY)
 
+### Generate IG token
+
+1. Go to https://developers.facebook.com/apps/6082132551847812/use_cases
+2. Click customize
+3. Click API setup with instagram login
+4. Toggle to show the 2nd section called "Generate access tokens"
+5. Click the "generate token" link
+
 The variables for MAIL_HOST, MAIL_USERNAME and MAIL_PASSWORD are used to automatically send out mails to a receiver specied in the file mailer.js. To do this a sender user needs to be specied in the .env file with email, password and the host used (look up what your host server is depending on the email provider).
 
 ### Running the script

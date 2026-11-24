@@ -19,6 +19,7 @@ const handleIdsIgnoreList = [
   "18327281965234279",
   "17911532709169280",
   "18137532583412158",
+  "18117236527821029"
 ];
 
 const INSTAGRAM_HANDLES = {
@@ -130,16 +131,16 @@ const getCarouselChidlren = async (mediaId) => {
 
 const shellCommand = (command) =>
   new Promise((resolve, reject) => {
-    exec(command, (error, stdout, stderr) => {
+    exec(command, { cwd: process.env.DIRNAME }, (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);
         log("ERROR: Could not execute the shell command: " + command);
         reject("ERROR");
+        return;
       }
+      // stderr alone is not a failure (e.g. Node deprecation warnings)
       if (stderr) {
         console.log(`stderr: ${stderr}`);
-        log("ERROR: Could not execute the shell command: " + command);
-        reject("STD_ERROR");
       }
       resolve(stdout);
     });
@@ -181,7 +182,7 @@ const pushAndDeploy = async (postname) => {
 
 const hexoCreatePost = async (postname) => {
   try {
-    const resp = await shellCommand(`hexo new post ${postname}`);
+    const resp = await shellCommand(`npx hexo new post ${postname}`);
     console.log(resp);
     return resp;
   } catch (err) {
@@ -191,6 +192,7 @@ const hexoCreatePost = async (postname) => {
       "ERROR: Could not create hexo post with postname: " + postname,
       JSON.stringify(err, null, 4)
     );
+    return null;
   }
 };
 
@@ -203,10 +205,17 @@ const delay = (ms) =>
 
 const downloadImage = async (imageURL, downloadFilePath) => {
   try {
+    if (!imageURL) {
+      throw new Error("Missing media URL");
+    }
+    const response = await fetch(imageURL);
+    if (!response.ok || !response.body) {
+      throw new Error(`HTTP ${response.status} when fetching media`);
+    }
+    fs.mkdirSync(path.dirname(downloadFilePath), { recursive: true });
     const stream = fs.createWriteStream(downloadFilePath);
-    const { body } = await fetch(imageURL);
-    await finished(Readable.fromWeb(body).pipe(stream));
-    return;
+    await finished(Readable.fromWeb(response.body).pipe(stream));
+    return true;
   } catch (err) {
     log(
       "ERROR: Could download the file with url: " +
@@ -214,14 +223,15 @@ const downloadImage = async (imageURL, downloadFilePath) => {
         " to: " +
         downloadFilePath
     );
-    log(JSON.stringify(err, null, 4));
+    log(err.message || JSON.stringify(err, null, 4));
     await mailer.sendErrorLogMail(
       "ERROR: Could download the file with url: " +
         imageURL +
         " to: " +
         downloadFilePath,
-      JSON.stringify(err, null, 4)
+      err.message || JSON.stringify(err, null, 4)
     );
+    return false;
   }
 };
 
@@ -328,8 +338,21 @@ const run = async () => {
 
           if (!fs.existsSync(markdownPath)) {
             // Hexo-post for this IG-post doesn't already exists
-            await hexoCreatePost(postId);
+            const created = await hexoCreatePost(postId);
+            if (created === null) {
+              continue;
+            }
             await delay(500);
+
+            // IG omits media_url for some videos (e.g. copyrighted audio), use the thumbnail as an image instead
+            if (
+              item.media_type === "VIDEO" &&
+              !item.media_url &&
+              item.thumbnail_url
+            ) {
+              item.media_type = "IMAGE";
+              item.media_url = item.thumbnail_url;
+            }
 
             const postFolderPath = path.join(
               process.env.DIRNAME,
